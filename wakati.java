@@ -6,15 +6,18 @@ public class wakati {
         Scanner input= new Scanner(System.in);
         int sec= input.nextInt();
         
-        minutes=sec/60;
+        seconds=(sec%3600)%60;
+        minutes=(sec%3600)/60;
         hours=sec/3600;
         days=sec/86400;
         months=sec/2592000;
         years=sec/31536000;
         
-        System.out.println(years+"years" 
-                            +days +"days"
-                            +hours+"hours"
-                            +minutes +"minutes");
+        System.out.println(years +"years" 
+                            + months +"months"
+                            + days +"days"
+                            + hours +"hours"
+                            + minutes +"minutes"
+                            + seconds +"seconds");
     }
 }
